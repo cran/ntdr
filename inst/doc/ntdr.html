@@ -341,59 +341,58 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 <p>The <code>ntdr</code> package is an easy way to access <a href="https://www.transit.dot.gov/ntd/ntd-data">National Transit
-Database</a> from R. The package is available on Github, and you can
-install it from there with <code>remotes::install_github()</code></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;https://github.com/vgXhc/ntdr&quot;</span>, <span class="at">build_vignettes =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+Database</a> from R. The package is available on CRAN, or you can
+install the latest development version from Github with
+<code>remotes::install_github(&quot;vgXhc/ntdr&quot;)</code></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ntdr&quot;</span>)</span></code></pre></div>
 <p>In addition to loading the <code>ntdr</code> package we also load the
 <code>tidyverse</code>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ntdr)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: package &#39;tibble&#39; was built under R version 4.2.3</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: package &#39;dplyr&#39; was built under R version 4.2.3</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ✔ dplyr     1.1.1     ✔ readr     2.1.4</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ✔ forcats   1.0.0     ✔ stringr   1.5.0</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ✔ ggplot2   3.4.1     ✔ tibble    3.2.1</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ✔ lubridate 1.9.2     ✔ tidyr     1.3.0</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ✔ purrr     1.0.1     </span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ✖ dplyr::filter() masks stats::filter()</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ✖ dplyr::lag()    masks stats::lag()</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ℹ Use the ]8;;http://conflicted.r-lib.org/conflicted package]8;; to force all conflicts to become errors</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">library</span>(ntdr)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co">#&gt; ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co">#&gt; ✔ dplyr     1.1.2     ✔ readr     2.1.4</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="co">#&gt; ✔ forcats   1.0.0     ✔ stringr   1.5.0</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="co">#&gt; ✔ ggplot2   3.4.2     ✔ tibble    3.2.1</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="co">#&gt; ✔ lubridate 1.9.2     ✔ tidyr     1.3.0</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="co">#&gt; ✔ purrr     1.0.1     </span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="co">#&gt; ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="co">#&gt; ✖ dplyr::filter() masks stats::filter()</span></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="co">#&gt; ✖ dplyr::lag()    masks stats::lag()</span></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="co">#&gt; ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</span></span></code></pre></div>
 <div id="get_ntd" class="section level1">
 <h1><code>get_ntd()</code></h1>
 <p><code>get_ntd()</code> is the main function of the package. It
 doesn’t have any required parameters:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ntd_data <span class="ot">&lt;-</span> <span class="fu">get_ntd</span>()</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; New names:</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `22526` -&gt; `22526...34`</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `22523` -&gt; `22523...71`</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `22526` -&gt; `22526...95`</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `23344` -&gt; `23344...100`</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `22523` -&gt; `22523...102`</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `23344` -&gt; `23344...139`</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `19423` -&gt; `19423...147`</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `19423` -&gt; `19423...187`</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>ntd_data</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 576,300 × 12</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    ntd_id_5 ntd_id_4 agency      active reporter_type   uza uza_name modes tos  </span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;       &lt;chr&gt;  &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1 00001    0001     King Count… Active Full Reporte…    14 Seattle… FB    DO   </span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2 00001    0001     King Count… Active Full Reporte…    14 Seattle… FB    DO   </span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3 00001    0001     King Count… Active Full Reporte…    14 Seattle… FB    DO   </span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4 00001    0001     King Count… Active Full Reporte…    14 Seattle… FB    DO   </span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  5 00001    0001     King Count… Active Full Reporte…    14 Seattle… FB    DO   </span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  6 00001    0001     King Count… Active Full Reporte…    14 Seattle… FB    DO   </span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  7 00001    0001     King Count… Active Full Reporte…    14 Seattle… FB    DO   </span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8 00001    0001     King Count… Active Full Reporte…    14 Seattle… FB    DO   </span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  9 00001    0001     King Count… Active Full Reporte…    14 Seattle… FB    DO   </span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 00001    0001     King Count… Active Full Reporte…    14 Seattle… FB    DO   </span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # ℹ 576,290 more rows</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # ℹ 3 more variables: month &lt;date&gt;, value &lt;dbl&gt;, ntd_variable &lt;chr&gt;</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(ntd_data)</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] &quot;ntd_id_5&quot;      &quot;ntd_id_4&quot;      &quot;agency&quot;        &quot;active&quot;       </span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [5] &quot;reporter_type&quot; &quot;uza&quot;           &quot;uza_name&quot;      &quot;modes&quot;        </span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [9] &quot;tos&quot;           &quot;month&quot;         &quot;value&quot;         &quot;ntd_variable&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>ntd_data <span class="ot">&lt;-</span> <span class="fu">get_ntd</span>()</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="co">#&gt; New names:</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt; • `156143` -&gt; `156143...15`</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">#&gt; • `156143` -&gt; `156143...16`</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="co">#&gt; • `141871` -&gt; `141871...18`</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">#&gt; • `141871` -&gt; `141871...19`</span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="co">#&gt; • `146253` -&gt; `146253...44`</span></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co">#&gt; • `146253` -&gt; `146253...45`</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>ntd_data</span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">#&gt; # A tibble: 582,105 × 14</span></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="co">#&gt;    ntd_id_5 ntd_id_4 agency      active reporter_type uza   uace  uza_name modes</span></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;       &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;</span></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">#&gt;  1 00001    0001     King Count… Active Full Reporte… 14    80389 Seattle… DR   </span></span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="co">#&gt;  2 00001    0001     King Count… Active Full Reporte… 14    80389 Seattle… DR   </span></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co">#&gt;  3 00001    0001     King Count… Active Full Reporte… 14    80389 Seattle… DR   </span></span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="co">#&gt;  4 00001    0001     King Count… Active Full Reporte… 14    80389 Seattle… DR   </span></span>
+<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a><span class="co">#&gt;  5 00001    0001     King Count… Active Full Reporte… 14    80389 Seattle… DR   </span></span>
+<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a><span class="co">#&gt;  6 00001    0001     King Count… Active Full Reporte… 14    80389 Seattle… DR   </span></span>
+<span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a><span class="co">#&gt;  7 00001    0001     King Count… Active Full Reporte… 14    80389 Seattle… DR   </span></span>
+<span id="cb3-20"><a href="#cb3-20" tabindex="-1"></a><span class="co">#&gt;  8 00001    0001     King Count… Active Full Reporte… 14    80389 Seattle… DR   </span></span>
+<span id="cb3-21"><a href="#cb3-21" tabindex="-1"></a><span class="co">#&gt;  9 00001    0001     King Count… Active Full Reporte… 14    80389 Seattle… DR   </span></span>
+<span id="cb3-22"><a href="#cb3-22" tabindex="-1"></a><span class="co">#&gt; 10 00001    0001     King Count… Active Full Reporte… 14    80389 Seattle… DR   </span></span>
+<span id="cb3-23"><a href="#cb3-23" tabindex="-1"></a><span class="co">#&gt; # ℹ 582,095 more rows</span></span>
+<span id="cb3-24"><a href="#cb3-24" tabindex="-1"></a><span class="co">#&gt; # ℹ 5 more variables: tos &lt;chr&gt;, modes_simplified &lt;chr&gt;, month &lt;date&gt;,</span></span>
+<span id="cb3-25"><a href="#cb3-25" tabindex="-1"></a><span class="co">#&gt; #   value &lt;dbl&gt;, ntd_variable &lt;chr&gt;</span></span>
+<span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a><span class="fu">colnames</span>(ntd_data)</span>
+<span id="cb3-27"><a href="#cb3-27" tabindex="-1"></a><span class="co">#&gt;  [1] &quot;ntd_id_5&quot;         &quot;ntd_id_4&quot;         &quot;agency&quot;           &quot;active&quot;          </span></span>
+<span id="cb3-28"><a href="#cb3-28" tabindex="-1"></a><span class="co">#&gt;  [5] &quot;reporter_type&quot;    &quot;uza&quot;              &quot;uace&quot;             &quot;uza_name&quot;        </span></span>
+<span id="cb3-29"><a href="#cb3-29" tabindex="-1"></a><span class="co">#&gt;  [9] &quot;modes&quot;            &quot;tos&quot;              &quot;modes_simplified&quot; &quot;month&quot;           </span></span>
+<span id="cb3-30"><a href="#cb3-30" tabindex="-1"></a><span class="co">#&gt; [13] &quot;value&quot;            &quot;ntd_variable&quot;</span></span></code></pre></div>
 <p>By default, the package downloads what the NTD calls “Complete
 Monthly Ridership (with adjustments and estimates).” Alternatively you
 can request <code>raw</code> data (“Raw Monthly Ridership (No
@@ -401,7 +400,7 @@ Adjustments or Estimates)”). For a more detailed discussion of the
 difference between the two data types, see <a href="https://haraldkliems.netlify.app/posts/2023-03-26-understanding-adjusted-data-in-the-national-transit-database/">this
 blog post</a>.</p>
 <p>You see that the package downloads a fairly large <code>xlsx</code>
-file from the web and returns a tibble with 576300 rows and 12 columns.
+file from the web and returns a tibble with 582105 rows and 14 columns.
 The first two columns are identifiers for the transit agency; followed
 by a human-readable agency name. Note that the agency name may not be
 what you expect. For example, the name of our local agency in Madison
@@ -420,45 +419,43 @@ actually reported data.</p>
 <p><code>uza</code> is an identifier for <a href="https://www.fhwa.dot.gov/planning/census_issues/urbanized_areas_and_mpo_tma/faq/page01.cfm#q2">urbanized
 areas</a> and <code>uza_name</code> has the name of that area (this will
 usually be how you will find your local agency).</p>
+<p>Since July 2023, an additional identifier, <code>uace</code> is
+included. In future versions of the dataset, this identifier will likely
+replace the <code>uza</code> variable.</p>
 <p><code>modes</code> denotes the type of transit reported on.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ntd_data <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(modes)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 22 × 2</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    modes      n</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;  &lt;int&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1 AG      1275</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2 AR       255</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3 CB     35700</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4 CC       255</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  5 CR      9690</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  6 DR    237150</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  7 FB     11985</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8 HR      3825</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  9 IP      1020</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 LR      8925</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # ℹ 12 more rows</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>ntd_data <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>  <span class="fu">count</span>(modes)</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="co">#&gt; # A tibble: 30 × 2</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="co">#&gt;    modes      n</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;  &lt;int&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="co">#&gt;  1 AG      1285</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="co">#&gt;  2 AR       257</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="co">#&gt;  3 CB     35980</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="co">#&gt;  4 CC       257</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="co">#&gt;  5 CR      9766</span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="co">#&gt;  6 DR    240038</span></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a><span class="co">#&gt;  7 FB     12079</span></span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a><span class="co">#&gt;  8 HR      3855</span></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a><span class="co">#&gt;  9 IP      1028</span></span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a><span class="co">#&gt; 10 LR      8995</span></span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a><span class="co">#&gt; # ℹ 20 more rows</span></span></code></pre></div>
 <p>There are a lot of different modes, including rather obscure ones
 like “Inclined Plane” (<code>IP</code>) or “Alaska Railroad”
-(<code>AR</code>). You can find documentation of the different modes <a href="https://ftis.org/iNTD-Urban/modes.pdf">here</a>.</p>
+(<code>AR</code>). You can find documentation of the different modes <a href="https://ftis.org/iNTD-Urban/modes.pdf">here</a>. Since July 2023,
+a simplified variable for mode is included,
+<code>modes_simplified</code>, which only distinguishes between bus,
+rail, ferry, and other.</p>
 <p>The <code>tos</code> variable represents the “type of service”:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ntd_data <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(tos, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 13 × 2</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    tos                                                                 n</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;                                                           &lt;int&gt;</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1 DO                                                             294270</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2 PT                                                             244545</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3 TX                                                              31365</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4 TN                                                               3060</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  5 Reduced Reporters                                                 510</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  6 Rural Reporters                                                   510</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  7 &lt;NA&gt;                                                              510</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8 Rolling 12-Month Sum                                              255</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  9 Rolling 12-Month Sum with Reduced Reporters                       255</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 Rolling 12-Month Sum with Reduced and Rural Reporter Estimates    255</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 11 Subtotal with Reduced Reporters                                   255</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 12 Subtotal with Reduced and Rural Reporter Estimates                255</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 13 Total                                                             255</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>ntd_data <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="fu">count</span>(tos, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co">#&gt; # A tibble: 5 × 2</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">#&gt;   tos        n</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;  &lt;int&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="co">#&gt; 1 DO    296578</span></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="co">#&gt; 2 PT    246977</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="co">#&gt; 3 TX     31868</span></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="co">#&gt; 4 TN      3598</span></span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a><span class="co">#&gt; 5 &lt;NA&gt;    3084</span></span></code></pre></div>
 <p>The most common values are <code>DO</code>, which is directly
 operated service, i.e. a transit agency running their own service; and
 <code>PT</code> for “purchased transportation”, i.e. a transit agency
@@ -477,23 +474,20 @@ agencies, modes, and types of service.</p>
 <h1>Plot the data</h1>
 <p>The data are returned in a long format, which makes it easy to create
 plots:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_ntd</span>(<span class="at">agency =</span> <span class="fu">c</span>(<span class="st">&quot;City of Madison&quot;</span>, <span class="st">&quot;Capital Area Transportation Authority&quot;</span>), <span class="at">modes =</span> <span class="st">&quot;MB&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(tos <span class="sc">==</span> <span class="st">&quot;DO&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(month, value, <span class="at">color =</span> agency)) <span class="sc">+</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Monthly unlinked passenger trips in Madison and Lansing&quot;</span>) <span class="sc">+</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; New names:</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `22526` -&gt; `22526...34`</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `22523` -&gt; `22523...71`</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `22526` -&gt; `22526...95`</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `23344` -&gt; `23344...100`</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `22523` -&gt; `22523...102`</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `23344` -&gt; `23344...139`</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `19423` -&gt; `19423...147`</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • `19423` -&gt; `19423...187`</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: Removed 3 rows containing missing values (`geom_line()`).</span></span></code></pre></div>
-<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">get_ntd</span>(<span class="at">agency =</span> <span class="fu">c</span>(<span class="st">&quot;City of Madison&quot;</span>, <span class="st">&quot;Capital Area Transportation Authority&quot;</span>), <span class="at">modes =</span> <span class="st">&quot;MB&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(tos <span class="sc">==</span> <span class="st">&quot;DO&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(month, value, <span class="at">color =</span> agency)) <span class="sc">+</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Monthly unlinked passenger trips in Madison and Lansing&quot;</span>) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="co">#&gt; New names:</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="co">#&gt; • `156143` -&gt; `156143...15`</span></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a><span class="co">#&gt; • `156143` -&gt; `156143...16`</span></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="co">#&gt; • `141871` -&gt; `141871...18`</span></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="co">#&gt; • `141871` -&gt; `141871...19`</span></span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="co">#&gt; • `146253` -&gt; `146253...44`</span></span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="co">#&gt; • `146253` -&gt; `146253...45`</span></span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
 </div>
 
 

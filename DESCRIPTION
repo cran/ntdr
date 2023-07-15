@@ -1,7 +1,7 @@
 Package: ntdr
 Type: Package
 Title: Retrieve Data from the National Transit Database
-Version: 0.3.0
+Version: 0.3.1
 Authors@R: person(
     "Harald", "Kliems", 
     email = "kliems@gmail.com", 
@@ -19,8 +19,8 @@ Config/testthat/edition: 3
 VignetteBuilder: knitr
 URL: https://vgxhc.github.io/ntdr/
 NeedsCompilation: no
-Packaged: 2023-05-27 22:50:23 UTC; user1
+Packaged: 2023-07-15 17:06:00 UTC; user1
 Author: Harald Kliems [cre, aut, cph] (<https://orcid.org/0000-0003-2542-0047>)
 Maintainer: Harald Kliems <kliems@gmail.com>
 Repository: CRAN
-Date/Publication: 2023-05-30 07:10:02 UTC
+Date/Publication: 2023-07-15 17:20:02 UTC

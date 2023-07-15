@@ -1,3 +1,6 @@
+# ntdr 0.3.1
+* Bugfix: Change in source data layout breaks package (https://github.com/vgXhc/ntdr/issues/6)
+
 # ntdr 0.3.0
 * retire `get_ntd_url` as user-facing function
 * update documentation to reflect new NTD language about data type

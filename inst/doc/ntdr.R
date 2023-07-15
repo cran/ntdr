@@ -5,7 +5,7 @@ knitr::opts_chunk$set(
 )
 
 ## ----eval=FALSE---------------------------------------------------------------
-#  remotes::install_github("https://github.com/vgXhc/ntdr", build_vignettes = TRUE)
+#  install.packages("ntdr")
 
 ## ----setup--------------------------------------------------------------------
 library(ntdr)
