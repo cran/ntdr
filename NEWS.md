@@ -1,3 +1,6 @@
+# ntdr 0.3.2
+* Bugfix: Change in source data leads to incorrect column labels (#9)
+
 # ntdr 0.3.1
 * Bugfix: Change in source data layout breaks package (https://github.com/vgXhc/ntdr/issues/6)
 
