@@ -349,16 +349,18 @@ install the latest development version from Github with
 <code>tidyverse</code>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">library</span>(ntdr)</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co">#&gt; ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──</span></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co">#&gt; ✔ dplyr     1.1.2     ✔ readr     2.1.4</span></span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="co">#&gt; ✔ forcats   1.0.0     ✔ stringr   1.5.0</span></span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="co">#&gt; ✔ ggplot2   3.4.2     ✔ tibble    3.2.1</span></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="co">#&gt; ✔ lubridate 1.9.2     ✔ tidyr     1.3.0</span></span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="co">#&gt; ✔ purrr     1.0.1     </span></span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="co">#&gt; ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──</span></span>
-<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="co">#&gt; ✖ dplyr::filter() masks stats::filter()</span></span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="co">#&gt; ✖ dplyr::lag()    masks stats::lag()</span></span>
-<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="co">#&gt; ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</span></span></code></pre></div>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co">#&gt; Warning: package &#39;ggplot2&#39; was built under R version 4.3.2</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co">#&gt; Warning: package &#39;purrr&#39; was built under R version 4.3.2</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="co">#&gt; ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="co">#&gt; ✔ dplyr     1.1.2     ✔ readr     2.1.4</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="co">#&gt; ✔ forcats   1.0.0     ✔ stringr   1.5.0</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="co">#&gt; ✔ ggplot2   3.4.4     ✔ tibble    3.2.1</span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="co">#&gt; ✔ lubridate 1.9.2     ✔ tidyr     1.3.0</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="co">#&gt; ✔ purrr     1.0.2     </span></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="co">#&gt; ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──</span></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="co">#&gt; ✖ dplyr::filter() masks stats::filter()</span></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="co">#&gt; ✖ dplyr::lag()    masks stats::lag()</span></span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a><span class="co">#&gt; ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</span></span></code></pre></div>
 <div id="get_ntd" class="section level1">
 <h1><code>get_ntd()</code></h1>
 <p><code>get_ntd()</code> is the main function of the package. It
@@ -368,20 +370,20 @@ doesn’t have any required parameters:</p>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt; • `2033379` -&gt; `2033379...25`</span></span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">#&gt; • `2033379` -&gt; `2033379...27`</span></span>
 <span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>ntd_data</span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">#&gt; # A tibble: 589,160 × 13</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">#&gt; # A tibble: 607,810 × 13</span></span>
 <span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="co">#&gt;    ntd_id_5 ntd_id_4 agency      active reporter_type uace  uza_name modes tos  </span></span>
 <span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;       &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;</span></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="co">#&gt;  1 00001    0001     King Count… Active Full Reporte… 80389 Seattle… DR    PT   </span></span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">#&gt;  2 00001    0001     King Count… Active Full Reporte… 80389 Seattle… DR    PT   </span></span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="co">#&gt;  3 00001    0001     King Count… Active Full Reporte… 80389 Seattle… DR    PT   </span></span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="co">#&gt;  4 00001    0001     King Count… Active Full Reporte… 80389 Seattle… DR    PT   </span></span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">#&gt;  5 00001    0001     King Count… Active Full Reporte… 80389 Seattle… DR    PT   </span></span>
-<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="co">#&gt;  6 00001    0001     King Count… Active Full Reporte… 80389 Seattle… DR    PT   </span></span>
-<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co">#&gt;  7 00001    0001     King Count… Active Full Reporte… 80389 Seattle… DR    PT   </span></span>
-<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="co">#&gt;  8 00001    0001     King Count… Active Full Reporte… 80389 Seattle… DR    PT   </span></span>
-<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a><span class="co">#&gt;  9 00001    0001     King Count… Active Full Reporte… 80389 Seattle… DR    PT   </span></span>
-<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a><span class="co">#&gt; 10 00001    0001     King Count… Active Full Reporte… 80389 Seattle… DR    PT   </span></span>
-<span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a><span class="co">#&gt; # ℹ 589,150 more rows</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="co">#&gt;  1 00001    0001     King Count… Active Full Reporter 80389 Seattle… DR    PT   </span></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">#&gt;  2 00001    0001     King Count… Active Full Reporter 80389 Seattle… DR    PT   </span></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="co">#&gt;  3 00001    0001     King Count… Active Full Reporter 80389 Seattle… DR    PT   </span></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="co">#&gt;  4 00001    0001     King Count… Active Full Reporter 80389 Seattle… DR    PT   </span></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">#&gt;  5 00001    0001     King Count… Active Full Reporter 80389 Seattle… DR    PT   </span></span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="co">#&gt;  6 00001    0001     King Count… Active Full Reporter 80389 Seattle… DR    PT   </span></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co">#&gt;  7 00001    0001     King Count… Active Full Reporter 80389 Seattle… DR    PT   </span></span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="co">#&gt;  8 00001    0001     King Count… Active Full Reporter 80389 Seattle… DR    PT   </span></span>
+<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a><span class="co">#&gt;  9 00001    0001     King Count… Active Full Reporter 80389 Seattle… DR    PT   </span></span>
+<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a><span class="co">#&gt; 10 00001    0001     King Count… Active Full Reporter 80389 Seattle… DR    PT   </span></span>
+<span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a><span class="co">#&gt; # ℹ 607,800 more rows</span></span>
 <span id="cb3-20"><a href="#cb3-20" tabindex="-1"></a><span class="co">#&gt; # ℹ 4 more variables: modes_simplified &lt;chr&gt;, month &lt;date&gt;, value &lt;dbl&gt;,</span></span>
 <span id="cb3-21"><a href="#cb3-21" tabindex="-1"></a><span class="co">#&gt; #   ntd_variable &lt;chr&gt;</span></span>
 <span id="cb3-22"><a href="#cb3-22" tabindex="-1"></a><span class="fu">colnames</span>(ntd_data)</span>
@@ -392,26 +394,38 @@ doesn’t have any required parameters:</p>
 <p>By default, the package downloads what the NTD calls “Complete
 Monthly Ridership (with adjustments and estimates).” Alternatively you
 can request <code>raw</code> data (“Raw Monthly Ridership (No
-Adjustments or Estimates)”). For a more detailed discussion of the
-difference between the two data types, see <a href="https://haraldkliems.netlify.app/posts/2023-03-26-understanding-adjusted-data-in-the-national-transit-database/">this
-blog post</a>.</p>
-<p>You see that the package downloads a fairly large <code>xlsx</code>
-file from the web and returns a tibble with 589160 rows and 13 columns.
-The first two columns are identifiers for the transit agency; followed
-by a human-readable agency name. Note that the agency name may not be
-what you expect. For example, the name of our local agency in Madison
+Adjustments or Estimates)”). The complete data includes the most recent
+data available. The downside is that depending on the agency, the data
+may be based on a growth estimate, and there is currently no way to
+distinguish whether a value is based on an agency’s report or on the
+growth estimate. Thus, very recent values and values for smaller
+agencies should be interpreted with caution and may be revised later.
+The <code>raw</code> data is the most reliable data, but the dataset
+only is released once a year.</p>
+<p>The package downloads a fairly large <code>xlsx</code> file from the
+web and returns a tibble with 607810 rows and 13 columns. The first two
+columns are identifiers for the transit agency; followed by a
+human-readable agency name. Note that the agency name may not be what
+you expect. For example, the name of our local agency in Madison
 (Wisconsin) is <a href="https://www.cityofmadison.com/metro">“Metro
 Transit”</a>. But in the NTD data it is listed as “City of Madison”. So
 if you cannot find your agency, use the <code>uza_name</code> variable
 described below.</p>
 <p>NTD data go back as far as 2002, and some agencies no longer actively
 report data, report them under a different ID, or don’t even exist
-anymore. This is reflected in the <code>active</code> column.
-<code>reporter_type</code> most commonly takes on the
+anymore. This is reflected in the <code>active</code> column. Until
+April 2024, the <code>active</code> data applied to the whole agency
+itself. More recently, the data distinguishes between different types of
+service (see below) within an agency, limiting the usefulness of the
+variable. I.e. an agency may still actively report data on their
+directly operated bus service, but they no longer run (and therefore
+actively report) on light rail service.</p>
+<p>The <code>reporter_type</code> variable most commonly takes on the
 <code>Full reporter</code> value, but especially smaller or rural
 systems may have a different value for this variable. For agencies that
 aren’t full reporters, the NTD data may include projections rather than
-actually reported data.</p>
+actually reported data. Even for full reporters, most recent data may be
+based on estimates and may be corrected in future data releases.</p>
 <p><code>uza</code> is an identifier for <a href="https://www.fhwa.dot.gov/planning/census_issues/urbanized_areas_and_mpo_tma/faq/page01.cfm#q2">urbanized
 areas</a> and <code>uza_name</code> has the name of that area (this will
 usually be how you will find your local agency).</p>
@@ -424,16 +438,16 @@ replace the <code>uza</code> variable.</p>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="co">#&gt; # A tibble: 21 × 2</span></span>
 <span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="co">#&gt;    modes      n</span></span>
 <span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;  &lt;int&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="co">#&gt;  1 AG      1300</span></span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="co">#&gt;  2 AR       260</span></span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="co">#&gt;  3 CB     36920</span></span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="co">#&gt;  4 CC       260</span></span>
-<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="co">#&gt;  5 CR      9880</span></span>
-<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="co">#&gt;  6 DR    244400</span></span>
-<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a><span class="co">#&gt;  7 FB     12480</span></span>
-<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a><span class="co">#&gt;  8 HR      4160</span></span>
-<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a><span class="co">#&gt;  9 IP      1040</span></span>
-<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a><span class="co">#&gt; 10 LR      9100</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="co">#&gt;  1 AG      1330</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="co">#&gt;  2 AR       266</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="co">#&gt;  3 CB     37772</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="co">#&gt;  4 CC       266</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="co">#&gt;  5 CR     10108</span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="co">#&gt;  6 DR    252434</span></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a><span class="co">#&gt;  7 FB     12768</span></span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a><span class="co">#&gt;  8 HR      4256</span></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a><span class="co">#&gt;  9 IP      1064</span></span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a><span class="co">#&gt; 10 LR      9310</span></span>
 <span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a><span class="co">#&gt; # ℹ 11 more rows</span></span></code></pre></div>
 <p>There are a lot of different modes, including rather obscure ones
 like “Inclined Plane” (<code>IP</code>) or “Alaska Railroad”
@@ -447,10 +461,10 @@ rail, ferry, and other.</p>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co">#&gt; # A tibble: 4 × 2</span></span>
 <span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">#&gt;   tos        n</span></span>
 <span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;  &lt;int&gt;</span></span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="co">#&gt; 1 DO    301340</span></span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="co">#&gt; 2 PT    251160</span></span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="co">#&gt; 3 TX     32500</span></span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="co">#&gt; 4 TN      4160</span></span></code></pre></div>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="co">#&gt; 1 DO    311220</span></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="co">#&gt; 2 PT    258818</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="co">#&gt; 3 TX     33516</span></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="co">#&gt; 4 TN      4256</span></span></code></pre></div>
 <p>The most common values are <code>DO</code>, which is directly
 operated service, i.e. a transit agency running their own service; and
 <code>PT</code> for “purchased transportation”, i.e. a transit agency
@@ -460,8 +474,8 @@ these, with <code>DO</code> being the regular, fixed route service and
 transit.</p>
 <p>Finally, the <code>month</code> and <code>value</code> variables
 provide the actual transit data for a given month. What variable is
-presented by <code>value</code> is in the <code>ntd_variable</code>. If
-you call <code>get_ntd()</code> without any additional parameters, it
+represented by <code>value</code> is in the <code>ntd_variable</code>.
+If you call <code>get_ntd()</code> without any additional parameters, it
 will return the “unlinked passenger trips” (UPT) metric for all
 agencies, modes, and types of service.</p>
 </div>
@@ -478,7 +492,7 @@ plots:</p>
 <span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="co">#&gt; New names:</span></span>
 <span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="co">#&gt; • `2033379` -&gt; `2033379...25`</span></span>
 <span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a><span class="co">#&gt; • `2033379` -&gt; `2033379...27`</span></span></code></pre></div>
-<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
 </div>
 
 

@@ -1,3 +1,6 @@
+# ntdr 0.3.4
+* small updates to documentation to account for changes in April data release (#14)
+
 # ntdr 0.3.3
 * Bugfix: Fixing breaking change with the August data release (#12)
 
