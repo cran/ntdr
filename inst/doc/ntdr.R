@@ -1,4 +1,4 @@
-## ---- include = FALSE---------------------------------------------------------
+## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -9,7 +9,8 @@ knitr::opts_chunk$set(
 
 ## ----setup--------------------------------------------------------------------
 library(ntdr)
-library(tidyverse)
+library(dplyr)
+library(ggplot2)
 
 ## ----bare-get-ntd-call--------------------------------------------------------
 ntd_data <- get_ntd()
